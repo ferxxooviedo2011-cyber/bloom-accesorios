@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLOOM ACCESORIOS</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{--blue:#dcebfa;--blue2:#bfdcf4;--dark:#29445f;--red:#d91f26;--bg:#f8fbff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--dark)}
+header{position:sticky;top:0;z-index:10;background:#fff;padding:12px 5%;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 2px 12px #0001}.logo{font-weight:900;letter-spacing:1.5px;font-size:23px}.search{flex:1;min-width:190px;padding:12px 16px;border:1px solid #ccd9e5;border-radius:30px}nav{display:flex;gap:6px;overflow:auto}nav button,.cart{border:0;background:var(--blue);color:var(--dark);padding:10px 12px;border-radius:20px;font-weight:700;white-space:nowrap}
+.hero{padding:55px 6%;background:linear-gradient(135deg,var(--blue),#fff)}.hero h1{font-size:clamp(45px,9vw,82px);margin:10px 0}.badge{background:var(--red);color:white;padding:7px 12px;border-radius:20px;font-weight:bold}
+.section{padding:32px 6%}.section h2{font-size:28px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:18px}.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #0001}.pic{height:215px;background:var(--blue);display:flex;align-items:center;justify-content:center}.pic img{width:100%;height:100%;object-fit:cover}.info{padding:14px}.price{font-size:20px;font-weight:900;color:var(--red);margin:8px 0}.stock{font-size:13px;color:#657384;margin-bottom:9px}.add{width:100%;border:0;background:var(--dark);color:#fff;padding:11px;border-radius:11px;font-weight:bold}.empty{color:#657384;padding:20px 0}
+footer{margin-top:40px;background:#29445f;color:#fff;padding:30px 6%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.social{display:flex;gap:9px}.social a{color:#fff;text-decoration:none;background:#ffffff1c;padding:11px 14px;border-radius:20px}
+.overlay{display:none;position:fixed;inset:0;background:#0008;z-index:20}.drawer{position:absolute;right:0;top:0;width:min(440px,100%);height:100%;background:#fff;padding:22px;overflow:auto}.close{float:right;border:0;background:none;font-size:25px}.item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid #ddd}.item img{width:60px;height:60px;object-fit:cover;border-radius:9px}.pay{background:var(--blue);padding:15px;border-radius:14px;margin-top:15px}.pay input{width:100%;padding:10px;margin:5px 0;border:1px solid #ccd9e5;border-radius:9px}.wa{display:block;background:#178a45;color:#fff;text-align:center;text-decoration:none;padding:13px;border-radius:11px;font-weight:bold;margin-top:10px}
+</style>
+</head>
+<body>
+<header><div class="logo">BLOOM ACCESORIOS</div><input id="search" class="search" placeholder="Buscar productos..."><nav id="nav"></nav><button class="cart" onclick="openCart()">🛒 <span id="count">0</span></button></header>
+<section class="hero"><span class="badge">BETA 5.1</span><h1>BLOOM</h1><p>Accesorios que florecen contigo.</p></section>
+<main id="main"></main>
+<footer><div><b>BLOOM ACCESORIOS</b><br><small>Gracias por comprar con nosotros.</small></div><div class="social"><a id="waFooter" target="_blank">💬 WhatsApp</a><a id="igFooter" target="_blank">📸 Instagram</a></div></footer>
+<div id="overlay" class="overlay"><div class="drawer"><button class="close" onclick="closeCart()">×</button><h2>Tu carrito</h2><div id="cart"></div><div id="payment"></div></div></div>
+<script>
+const DB_URL="https://fpoommdbqjyxbtdbsyxg.supabase.co",DB_KEY="sb_publishable_OMtcLm4g7uBAvUI0VYv_qg_gs5oF9Cr";const db=supabase.createClient(DB_URL,DB_KEY);
+const cats=["Colección Cristiana","Colección de Hombre","Colección de Honduras 🇭🇳","Collares","Pulseras","Anillos"];let products=[],banks=[],cart=[];
+const money=n=>new Intl.NumberFormat("es-HN",{style:"currency",currency:"HNL"}).format(n);
+const esc=s=>(s??"").toString().replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+async function load(){let p=await db.from("products").select("*").eq("active",true).gt("stock",0).order("created_at",{ascending:false});let b=await db.from("bank_accounts").select("*").eq("active",true);products=p.data||[];banks=b.data||[];render();}
+function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("nav").innerHTML=cats.map((c,i)=>`<button onclick="go(${i})">${c}</button>`).join("");document.getElementById("main").innerHTML=cats.map((c,i)=>{let a=products.filter(p=>(p.category===c||p.collection===c)&&(!q||(p.name+" "+p.category+" "+p.collection).toLowerCase().includes(q)));return `<section class="section" id="c${i}"><h2>${c}</h2><div class="grid">${a.length?a.map(card).join(""):'<div class="empty">No hay productos disponibles.</div>'}</div></section>`}).join("");}
+function card(p){return `<article class="card"><div class="pic">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}">`:"💎"}</div><div class="info"><b>${esc(p.name)}</b>${p.tag?`<br><small>${esc(p.tag)}</small>`:""}<div class="price">${money(p.price)}</div><div class="stock">Disponibles: ${p.stock}</div><button class="add" onclick="add(${p.id})">Agregar al carrito</button></div></article>`}
+function go(i){document.getElementById("c"+i)?.scrollIntoView({behavior:"smooth"})}document.getElementById("search").oninput=render;
+function add(id){let p=products.find(x=>x.id===id);if(!p||p.stock<1)return alert("Producto agotado.");let x=cart.find(x=>x.id===id);if(x)x.qty=Math.min(x.qty+1,p.stock);else cart.push({id,name:p.name,price:p.price,image:p.image,qty:1});update();openCart()}
+function update(){document.getElementById("count").textContent=cart.reduce((a,x)=>a+x.qty,0);let total=0;document.getElementById("cart").innerHTML=cart.length?cart.map(x=>{total+=x.price*x.qty;return `<div class="item"><img src="${esc(x.image||"")}"><div><b>${esc(x.name)}</b><br>${money(x.price)} × ${x.qty}<br><button onclick="qty(${x.id},-1)">−</button> <button onclick="qty(${x.id},1)">+</button></div></div>`}).join(""):"<p>Tu carrito está vacío.</p>";document.getElementById("payment").innerHTML=cart.length?`<div class="pay"><b>Total: ${money(total)}</b><h3>Pago por transferencia</h3>${banks.length?banks.map(b=>`<p><b>${esc(b.bank)}</b><br>${esc(b.account_type||"Cuenta")}<br>Cuenta: ${esc(b.account_number)}<br>${esc(b.account_holder||"")}</p>`).join(""):"<p>Próximamente se agregarán las cuentas.</p>"}<input id="customer" placeholder="Tu nombre"><input id="note" placeholder="Nota (opcional)"><a class="wa" href="#" onclick="wa(event)">Confirmar por WhatsApp</a></div>`:""}
+function qty(id,d){let x=cart.find(x=>x.id===id),p=products.find(x=>x.id===id);if(!x)return;x.qty+=d;if(p)x.qty=Math.min(x.qty,p.stock);if(x.qty<=0)cart=cart.filter(x=>x.id!==id);update()}
+function wa(e){e.preventDefault();let name=document.getElementById("customer").value||"Cliente",note=document.getElementById("note").value||"";let t="Hola, quiero confirmar mi pedido de BLOOM ACCESORIOS:\n\n"+cart.map(x=>`• ${x.name} x${x.qty} = ${money(x.price*x.qty)}`).join("\n")+"\n\nCliente: "+name+"\n"+note;window.open("https://wa.me/50494439739?text="+encodeURIComponent(t),"_blank")}
+function openCart(){document.getElementById("overlay").style.display="block";update()}function closeCart(){document.getElementById("overlay").style.display="none"}
+document.getElementById("waFooter").href="https://wa.me/50494439739";document.getElementById("igFooter").href="https://instagram.com/BLOOMACCESORIOS";
+db.channel("products-live").on("postgres_changes",{event:"*",schema:"public",table:"products"},load).subscribe();db.channel("banks-live").on("postgres_changes",{event:"*",schema:"public",table:"bank_accounts"},load).subscribe();load();
+</script></body></html>
