@@ -34,6 +34,6 @@ function update(){document.getElementById("count").textContent=cart.reduce((a,x)
 function qty(id,d){let x=cart.find(x=>x.id===id),p=products.find(x=>x.id===id);if(!x)return;x.qty+=d;if(p)x.qty=Math.min(x.qty,p.stock);if(x.qty<=0)cart=cart.filter(x=>x.id!==id);update()}
 function wa(e){e.preventDefault();let name=document.getElementById("customer").value||"Cliente",note=document.getElementById("note").value||"";let t="Hola, quiero confirmar mi pedido de BLOOM ACCESORIOS:\n\n"+cart.map(x=>`• ${x.name} x${x.qty} = ${money(x.price*x.qty)}`).join("\n")+"\n\nCliente: "+name+"\n"+note;window.open("https://wa.me/50494439739?text="+encodeURIComponent(t),"_blank")}
 function openCart(){document.getElementById("overlay").style.display="block";update()}function closeCart(){document.getElementById("overlay").style.display="none"}
-document.getElementById("waFooter").href="https://wa.me/50494439739";document.getElementById("igFooter").href="https://instagram.com/BLOOMACCESORIOS";
+document.getElementById("waFooter").href="https://wa.me/50494439739";document.getElementById("igFooter").href="https://www.instagram.com/bloom_accesorios.hn/";
 db.channel("products-live").on("postgres_changes",{event:"*",schema:"public",table:"products"},load).subscribe();db.channel("banks-live").on("postgres_changes",{event:"*",schema:"public",table:"bank_accounts"},load).subscribe();load();
 </script></body></html>
