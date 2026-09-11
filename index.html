@@ -1,11 +1,343 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173b68"><title>BLOOM ACCESORIOS</title><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
-:root{--blue:#8ed7ee;--pale:#e9faff;--navy:#173b68;--navy2:#0d2949;--red:#c94f5d;--cream:#fffaf7;--ink:#28364b;--line:#e5e9ef;--shadow:0 18px 50px #173b6818}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}a{text-decoration:none;color:inherit}.top{background:var(--navy);color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.4px}header{position:sticky;top:0;z-index:20;background:#fffaf7ed;backdrop-filter:blur(14px);border-bottom:1px solid #173b6812}.nav{max-width:1180px;margin:auto;padding:14px 20px;display:flex;gap:16px;align-items:center}.brand{display:flex;gap:9px;align-items:center;min-width:max-content}.mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),#fff);color:var(--navy);font-weight:900}.brand b{display:block;color:var(--navy);letter-spacing:2px}.brand small{color:var(--red);font-size:9px;letter-spacing:2px}.search{flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:999px;padding:12px 18px;outline:0}.cart{background:var(--navy);color:#fff;border:0;border-radius:999px;padding:11px 15px;font-weight:800;cursor:pointer}.cart i{background:var(--red);font-style:normal;border-radius:50%;padding:2px 6px}.cats{max-width:1180px;margin:auto;padding:0 20px 12px;display:flex;gap:8px;overflow:auto}.cat{white-space:nowrap;border:1px solid #d9e9ef;background:#fff;border-radius:999px;padding:9px 14px;color:var(--navy);font-weight:750;cursor:pointer}.cat.active,.cat:hover{background:var(--pale);border-color:var(--blue)}.hero{max-width:1180px;margin:24px auto;padding:0 20px}.heroBox{min-height:380px;border-radius:30px;position:relative;overflow:hidden;background:radial-gradient(circle at 82% 15%,#fff 0 8%,transparent 28%),linear-gradient(135deg,#effcff,#bcebf5 52%,#fff0ed);box-shadow:var(--shadow)}.heroBox:before{content:"";position:absolute;width:310px;height:310px;border-radius:50%;right:-80px;bottom:-100px;background:#c94f5d22}.heroBox:after{content:"✦";position:absolute;right:16%;top:15%;font-size:90px;color:#fff8;transform:rotate(15deg)}.heroText{position:relative;z-index:2;padding:58px;max-width:650px}.eyebrow{color:var(--red);font-size:11px;font-weight:900;letter-spacing:2px}.hero h1{font:clamp(44px,7vw,76px)/.95 Georgia,serif;color:var(--navy);margin:12px 0}.hero h1 em{color:var(--red);font-style:normal}.hero p{font-size:18px;line-height:1.6;color:#4d5b6e}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.primary,.secondary{border:0;border-radius:999px;padding:13px 18px;font-weight:850;cursor:pointer}.primary{background:var(--navy);color:#fff}.secondary{background:#fff;color:var(--navy);border:1px solid #dce5ea}.section{max-width:1180px;margin:55px auto;padding:0 20px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.head h2{font:32px Georgia,serif;color:var(--navy);margin:0}.muted{color:#748094;font-size:13px}.collection{scroll-margin-top:145px;margin-top:34px}.collection h3{font:25px Georgia,serif;color:var(--navy);margin:0 0 14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 7px 25px #173b680b;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.photo{aspect-ratio:1;background:linear-gradient(135deg,#eefbff,#fff3f0);display:grid;place-items:center;position:relative;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.placeholder{font:20px Georgia,serif;color:#8ba0b6}.tag{position:absolute;top:9px;left:9px;background:var(--red);color:#fff;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:850}.body{padding:14px}.body h4{color:var(--navy);margin:0 0 5px;font-size:16px}.price{color:#a83e4b;font-size:20px;font-weight:900;margin-top:10px}.stock{font-size:11px;color:#748094;margin-top:4px}.add{width:100%;margin-top:10px;border:0;border-radius:11px;background:var(--navy);color:#fff;padding:11px;font-weight:850;cursor:pointer}.empty{padding:35px;background:#fff;border:1px dashed #ccd7df;border-radius:18px;text-align:center;color:#718096}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}.feature{background:#fff;border:1px solid var(--line);padding:20px;border-radius:18px}.feature b{color:var(--navy)}.feature p{font-size:13px;line-height:1.5;color:#718096;margin-bottom:0}footer{margin-top:70px;background:var(--navy2);color:#fff}.foot{max-width:1180px;margin:auto;padding:38px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}.foot h3{font:24px Georgia,serif;margin:0 0 6px}.foot p{margin:0;color:#c9d6e5}.social{display:flex;gap:9px;flex-wrap:wrap}.social a{background:#fff;color:var(--navy);padding:11px 15px;border-radius:999px;font-weight:850;font-size:13px}.copy{text-align:center;border-top:1px solid #fff2;padding:11px;color:#9fb1c8;font-size:11px}.overlay{display:none;position:fixed;inset:0;background:#05122199;z-index:100;align-items:center;justify-content:center;padding:18px}.overlay.show{display:flex}.modal{width:min(720px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:24px;padding:24px;position:relative}.close{position:absolute;right:15px;top:14px;border:0;border-radius:50%;width:35px;height:35px;cursor:pointer}.modal h2{font:28px Georgia,serif;color:var(--navy)}.row{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.row img{width:60px;height:60px;object-fit:cover;border-radius:11px;background:#eefaff}.qty{display:flex;gap:6px;align-items:center;margin-top:6px}.qty button{border:1px solid var(--line);background:#fff;border-radius:7px;width:28px;height:28px}.total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;color:var(--navy);padding:18px 0}.pay{background:var(--pale);border:1px solid #d8edf2;border-radius:15px;padding:15px}.pay h4{margin:0 0 8px;color:var(--navy)}.pay p{font-size:13px}.wa{width:100%;border:0;border-radius:12px;padding:13px;background:#188b55;color:#fff;font-weight:900;cursor:pointer}.toast{position:fixed;right:18px;bottom:18px;background:var(--navy);color:#fff;padding:13px 16px;border-radius:13px;display:none;z-index:200}.toast.show{display:block}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.nav{flex-wrap:wrap}.brand{flex:1}.search{order:3;flex-basis:100%}.heroText{padding:38px 26px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.features{grid-template-columns:1fr}.foot{flex-direction:column;align-items:flex-start}}@media(max-width:430px){.grid{grid-template-columns:1fr 1fr}.body{padding:11px}.price{font-size:18px}}
-</style></head><body>
-<div class="top">✨ BLOOM ACCESORIOS · Accesorios que florecen contigo · Envíanos tu pedido por WhatsApp</div><header><div class="nav"><a class="brand" href="#"><span class="mark">B</span><span><b>BLOOM</b><small>ACCESORIOS</small></span></a><div class="search"><input id="search" placeholder="Buscar productos..."></div><button class="cart" id="cartBtn">🛍️ Carrito <i id="count">0</i></button></div><nav class="cats"><button class="cat active" data-cat="all">Todo</button><button class="cat" data-cat="Colección Cristiana">✝️ Cristiana</button><button class="cat" data-cat="Colección de Hombre">🖤 Hombre</button><button class="cat" data-cat="Colección de Honduras">🇭🇳 Honduras</button><button class="cat" data-cat="Collares">📿 Collares</button><button class="cat" data-cat="Pulseras">✨ Pulseras</button><button class="cat" data-cat="Anillos">💍 Anillos</button></nav></header>
-<section class="hero"><div class="heroBox"><div class="heroText"><div class="eyebrow">BLOOM ACCESORIOS · VERSIÓN DEFINITIVA</div><h1>Tu estilo.<br><em>Tu bloom.</em></h1><p>Descubre nuestras colecciones de collares, pulseras, anillos y piezas especiales. Elige tus favoritos y confirma tu pedido fácilmente.</p><div class="actions"><button class="primary" onclick="document.getElementById('productos').scrollIntoView()">Ver productos</button><a class="secondary" href="https://wa.me/50494439739" target="_blank">💬 WhatsApp</a></div></div></div></section>
-<section class="section" id="productos"><div class="head"><div><h2>Nuestras colecciones</h2><div class="muted" id="status">Cargando...</div></div></div><div id="collections"></div><div class="features"><div class="feature"><b>🌸 Selecciona tus favoritos</b><p>Busca por nombre o navega por colección y agrega varias piezas al carrito.</p></div><div class="feature"><b>💳 Paga por transferencia</b><p>Las cuentas bancarias activas aparecen automáticamente al continuar al pago.</p></div><div class="feature"><b>💬 Confirma por WhatsApp</b><p>Envía tu pedido y total directamente a BLOOM ACCESORIOS.</p></div></div></section>
-<footer><div class="foot"><div><h3>BLOOM ACCESORIOS</h3><p>Gracias por comprar con nosotros. ✨</p></div><div class="social"><a href="https://wa.me/50494439739" target="_blank">💬 WhatsApp</a><a href="https://www.instagram.com/bloom_accesorios.hn/" target="_blank">📷 Instagram</a></div></div><div class="copy">© 2026 BLOOM ACCESORIOS · Todos los derechos reservados.</div></footer>
-<div class="overlay" id="overlay"><div class="modal"><button class="close" onclick="closeCart()">✕</button><h2>Tu carrito</h2><div id="items"></div><div class="total"><span>Total</span><span id="total">L 0.00</span></div><div id="payment"></div><button class="primary" style="width:100%" onclick="payment()">Continuar al pago</button></div></div><div class="toast" id="toast"></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLOOM ACCESORIOS | Joyería</title>
+<meta name="description" content="BLOOM ACCESORIOS — accesorios que florecen contigo.">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{
+  --blue:#bfe8f5;
+  --blue2:#79cde3;
+  --navy:#071f3d;
+  --red:#d95b63;
+  --cream:#fffaf7;
+  --white:#fff;
+  --text:#182333;
+  --muted:#6d7785;
+  --line:#e8edf2;
+  --shadow:0 14px 40px rgba(7,31,61,.10);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--text)}
+button,input{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--navy);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:.5px}
+header{position:sticky;top:0;z-index:30;background:rgba(255,250,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,31,61,.08)}
+.header-inner{max-width:1200px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;min-width:max-content}
+.logo-mark{width:43px;height:43px;border-radius:50% 45% 55% 50%;background:linear-gradient(135deg,var(--blue2),var(--red));display:grid;place-items:center;color:white;font-weight:900;box-shadow:0 7px 18px rgba(121,205,227,.35)}
+.brand strong{font-family:Georgia,serif;letter-spacing:2px;font-size:18px;color:var(--navy)}
+.brand small{display:block;color:var(--red);letter-spacing:2px;font-size:9px;font-weight:800}
+.search{flex:1;position:relative;max-width:480px;margin:auto}
+.search input{width:100%;border:1px solid var(--line);background:#fff;border-radius:999px;padding:13px 45px 13px 18px;outline:none;box-shadow:0 4px 16px rgba(7,31,61,.04)}
+.search input:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(121,205,227,.15)}
+.search span{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.cart-btn{border:0;background:var(--navy);color:#fff;border-radius:999px;padding:12px 16px;font-weight:800;display:flex;gap:8px;align-items:center}
+.badge{background:var(--red);min-width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px}
+.nav{max-width:1200px;margin:auto;padding:0 20px 13px;display:flex;gap:8px;overflow:auto}
+.nav button{border:1px solid #dfe7ec;background:#fff;color:var(--navy);padding:9px 13px;border-radius:999px;white-space:nowrap;font-size:12px;font-weight:750}
+.nav button:hover,.nav button.active{background:var(--navy);color:#fff}
+.hero{max-width:1200px;margin:26px auto 0;padding:0 20px}
+.hero-card{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,#e9f9fd 0%,#bfe8f5 50%,#fff0ef 100%);min-height:330px;display:flex;align-items:center;padding:45px}
+.hero-card:before,.hero-card:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}
+.hero-card:before{width:230px;height:230px;background:rgba(255,255,255,.48);right:80px;top:-80px}
+.hero-card:after{width:170px;height:170px;background:rgba(217,91,99,.12);right:-30px;bottom:-40px}
+.hero-content{position:relative;z-index:2;max-width:610px}
+.eyebrow{color:var(--red);font-weight:900;letter-spacing:3px;font-size:11px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,67px);line-height:.98;margin:12px 0;color:var(--navy)}
+.hero p{font-size:16px;line-height:1.6;color:#405163;max-width:530px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.primary,.secondary{border:0;border-radius:999px;padding:13px 19px;font-weight:850}
+.primary{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(217,91,99,.25)}
+.secondary{background:#fff;color:var(--navy)}
+main{max-width:1200px;margin:auto;padding:34px 20px 70px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:34px 0 15px}
+.section-head h2{margin:0;font-family:Georgia,serif;font-size:29px;color:var(--navy)}
+.section-head span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 7px 25px rgba(7,31,61,.055);transition:.2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.photo{aspect-ratio:1/1;background:linear-gradient(145deg,#eaf9fc,#fff0ef);position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.no-photo{height:100%;display:grid;place-items:center;color:var(--navy);font-family:Georgia,serif;font-size:20px;padding:20px;text-align:center}
+.tag{position:absolute;top:11px;left:11px;background:var(--red);color:#fff;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:900}
+.stock{position:absolute;right:11px;top:11px;background:rgba(255,255,255,.9);border-radius:999px;padding:6px 9px;font-size:10px;font-weight:800;color:var(--navy)}
+.card-body{padding:15px;display:flex;flex-direction:column;flex:1}
+.card-body .collection{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--red);font-weight:900}
+.card h3{font-size:16px;margin:5px 0 8px;color:var(--navy)}
+.price{font-size:20px;font-weight:950;margin-top:auto}
+.card button{margin-top:12px;border:0;border-radius:13px;padding:11px;background:var(--navy);color:#fff;font-weight:850}
+.card button:hover{background:var(--red)}
+.empty{padding:35px;text-align:center;background:#fff;border:1px dashed #ccd8df;border-radius:20px;color:var(--muted)}
+.payment-box{background:#fff;border:1px solid var(--line);border-radius:25px;padding:22px;box-shadow:var(--shadow);margin-top:25px}
+.accounts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
+.account{border:1px solid var(--line);border-radius:17px;padding:15px;background:#fbfdfe}
+.account b{color:var(--navy)}
+footer{background:var(--navy);color:#fff;margin-top:20px}
+.footer-inner{max-width:1200px;margin:auto;padding:42px 20px 28px;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-title{font-family:Georgia,serif;font-size:24px}
+.footer p{color:#b9c7d6;font-size:13px;max-width:430px}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.social{background:#fff;color:var(--navy);border-radius:999px;padding:11px 15px;font-weight:850;font-size:13px}
+.social.whatsapp{background:#dff7e8}
+.copyright{border-top:1px solid rgba(255,255,255,.12);padding:14px 20px;text-align:center;color:#91a5b9;font-size:11px}
+.modal{position:fixed;inset:0;background:rgba(4,18,35,.55);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:14px}
+.modal.show{display:flex}
+.sheet{background:#fff;width:min(720px,100%);max-height:90vh;overflow:auto;border-radius:27px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.sheet-head{display:flex;justify-content:space-between;align-items:center}
+.sheet h2{margin:0;font-family:Georgia,serif;color:var(--navy)}
+.close{border:0;background:#eef3f6;border-radius:50%;width:38px;height:38px;font-size:20px}
+.cart-row{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-row img{width:60px;height:60px;object-fit:cover;border-radius:13px;background:#eef8fa}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:8px}
+.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;padding:18px 0}
+.checkout{display:grid;gap:10px}
+.checkout input,.checkout textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;outline:none}
+.checkout textarea{min-height:80px;resize:vertical}
+.notice{background:#f1fbfd;border-left:4px solid var(--blue2);padding:12px;border-radius:10px;font-size:13px}
+.spinner{text-align:center;padding:35px;color:var(--muted)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.accounts{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.header-inner{flex-wrap:wrap}.brand{width:100%;justify-content:center}.search{order:3;max-width:none}.cart-btn{position:absolute;right:15px;top:15px}.nav{padding-bottom:10px}.hero-card{padding:30px 23px;min-height:370px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.card-body{padding:12px}.card h3{font-size:14px}.price{font-size:17px}.accounts{grid-template-columns:1fr}.section-head h2{font-size:25px}}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.hero h1{font-size:42px}}
+</style>
+</head>
+<body>
+<div class="topbar">✨ Accesorios que florecen contigo · Envíos y pedidos por WhatsApp</div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="logo-mark">B</div>
+      <div><strong>BLOOM</strong><small>ACCESORIOS</small></div>
+    </a>
+    <div class="search">
+      <input id="search" type="search" placeholder="Buscar collares, pulseras, anillos..." autocomplete="off">
+      <span>⌕</span>
+    </div>
+    <button class="cart-btn" id="cartOpen">🛍️ Carrito <span class="badge" id="cartCount">0</span></button>
+  </div>
+  <nav class="nav" id="nav">
+    <button data-filter="all" class="active">Todo</button>
+    <button data-filter="Colección Cristiana">✝️ Cristiana</button>
+    <button data-filter="Colección de Hombre">🖤 Hombre</button>
+    <button data-filter="Colección de Honduras">🇭🇳 Honduras</button>
+    <button data-filter="Collares">📿 Collares</button>
+    <button data-filter="Pulseras">✨ Pulseras</button>
+    <button data-filter="Anillos">💍 Anillos</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-card">
+    <div class="hero-content">
+      <div class="eyebrow">BETA 5.1 · EDICIÓN DEFINITIVA</div>
+      <h1>BLOOM</h1>
+      <p>Accesorios que florecen contigo. Descubre piezas para expresar tu estilo, tu fe y lo que te hace especial.</p>
+      <div class="hero-actions">
+        <button class="primary" onclick="document.getElementById('productos').scrollIntoView()">Ver colección</button>
+        <a class="secondary" href="https://wa.me/50494439739" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="productos">
+  <div id="status" class="spinner">Cargando productos...</div>
+  <div id="catalog"></div>
+
+  <section id="pago" class="payment-box">
+    <div class="section-head" style="margin:0">
+      <div><h2>💳 Métodos de pago</h2><span>Realiza tu transferencia y envíanos el comprobante por WhatsApp.</span></div>
+    </div>
+    <div class="notice">Después de realizar tu pago, confirma tu pedido por WhatsApp para que podamos verificarlo.</div>
+    <div id="accounts" class="accounts"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-title">BLOOM ACCESORIOS</div>
+      <p>Gracias por comprar con nosotros. Encuentra accesorios que florecen contigo.</p>
+    </div>
+    <div class="socials">
+      <a class="social whatsapp" href="https://wa.me/50494439739" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="social" href="https://www.instagram.com/bloom_accesorios.hn/" target="_blank" rel="noopener">📷 Instagram</a>
+    </div>
+  </div>
+  <div class="copyright">© 2026 BLOOM ACCESORIOS · Honduras</div>
+</footer>
+
+<div class="modal" id="cartModal">
+  <div class="sheet">
+    <div class="sheet-head"><h2>Tu carrito 🛍️</h2><button class="close" id="cartClose">×</button></div>
+    <div id="cartItems"></div>
+    <div class="total"><span>Total</span><span id="cartTotal">L 0.00</span></div>
+    <div class="checkout">
+      <input id="customerName" placeholder="Tu nombre">
+      <input id="customerPhone" placeholder="Tu teléfono">
+      <textarea id="customerNote" placeholder="Dirección o indicaciones para el pedido"></textarea>
+      <div class="notice">Al continuar se abrirá WhatsApp con el resumen de tu pedido.</div>
+      <button class="primary" id="whatsappOrder">💬 Confirmar pedido por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
 <script>
-const URL="https://fpoommdbqjyxbtdbsyxg.supabase.co",KEY="sb_publishable_OMtcLm4g7uBAvUI0VYv_qg_gs5oF9Cr",db=supabase.createClient(URL,KEY);let products=[],banks=[],cart=JSON.parse(localStorage.getItem('bloom_cart')||'[]'),cat='all';const money=n=>new Intl.NumberFormat('es-HN',{style:'currency',currency:'HNL'}).format(Number(n)||0),esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));function toast(s){let x=document.getElementById('toast');x.textContent=s;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2500)}function save(){localStorage.setItem('bloom_cart',JSON.stringify(cart));document.getElementById('count').textContent=cart.reduce((a,x)=>a+x.qty,0)}async function load(){let [p,b]=await Promise.all([db.from('products').select('*').eq('active',true).gt('stock',0).order('created_at',{ascending:false}),db.from('bank_accounts').select('*').eq('active',true).order('created_at')]);if(p.error){console.error(p.error);toast('Revisa las políticas de lectura en Supabase.')}else products=p.data||[];banks=b.error?[]:b.data||[];render();if(!p.error&&products.length===0)document.getElementById('status').textContent='Aún no hay productos publicados.'}function filtered(){let q=document.getElementById('search').value.toLowerCase().trim();return products.filter(p=>(cat==='all'||p.category===cat||p.collection===cat)&&(!q||[p.name,p.category,p.collection,p.tag].filter(Boolean).join(' ').toLowerCase().includes(q)))}function render(){let list=filtered(),out=document.getElementById('collections');document.getElementById('status').textContent=list.length?list.length+' producto'+(list.length===1?'':'s')+' disponible'+(list.length===1?'':'s'): 'No encontramos productos con esos filtros.';let cats=['Colección Cristiana','Colección de Hombre','Colección de Honduras','Collares','Pulseras','Anillos'];out.innerHTML=list.length?cats.map(c=>{let a=list.filter(p=>p.category===c||p.collection===c);return a.length?`<section class="collection"><h3>${c}</h3><div class="grid">${a.map(card).join('')}</div></section>`:''}).join(''):'<div class="empty">🌸 No hay productos disponibles con esos filtros.</div>'}function card(p){return `<article class="card"><div class="photo">${p.tag?`<span class="tag">${esc(p.tag)}</span>`:''}${p.image?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">`:'<div class="placeholder">BLOOM</div>'}</div><div class="body"><h4>${esc(p.name)}</h4><div class="muted">${esc(p.collection||p.category)}</div><div class="price">${money(p.price)}</div><div class="stock">${p.stock<=2?'⚠️ Últimas unidades':'✓ Disponible'} · ${p.stock} en stock</div><button class="add" onclick="add(${p.id})">Agregar al carrito</button></div></article>`}function add(id){let p=products.find(x=>x.id===id);if(!p)return;let x=cart.find(x=>x.id===id);if(x){if(x.qty>=p.stock)return toast('No hay más unidades disponibles.');x.qty++}else cart.push({id:p.id,name:p.name,price:Number(p.price),image:p.image,qty:1,stock:p.stock});save();toast('Agregado al carrito 🛍️');openCart()}function openCart(){renderCart();document.getElementById('overlay').classList.add('show')}function closeCart(){document.getElementById('overlay').classList.remove('show')}function renderCart(){cart=cart.filter(x=>{let p=products.find(p=>p.id===x.id);if(!p||p.stock<=0)return false;x.stock=p.stock;x.price=Number(p.price);x.image=p.image;if(x.qty>x.stock)x.qty=x.stock;return true});save();let box=document.getElementById('items');if(!cart.length){box.innerHTML='<div class="empty">Tu carrito está vacío.</div>';document.getElementById('total').textContent=money(0);return}box.innerHTML=cart.map((x,i)=>`<div class="row"><img src="${esc(x.image||'')}" onerror="this.style.visibility='hidden'"><div><b>${esc(x.name)}</b><div class="muted">${money(x.price)} c/u</div><div class="qty"><button onclick="qty(${i},-1)">−</button><b>${x.qty}</b><button onclick="qty(${i},1)">+</button><button onclick="removeItem(${i})">🗑️</button></div></div><b>${money(x.price*x.qty)}</b></div>`).join('');document.getElementById('total').textContent=money(cart.reduce((a,x)=>a+x.price*x.qty,0))}function qty(i,d){cart[i].qty=Math.max(1,Math.min(cart[i].stock,cart[i].qty+d));save();renderCart()}function removeItem(i){cart.splice(i,1);save();renderCart()}function payment(){if(!cart.length)return toast('Agrega productos primero.');document.getElementById('payment').innerHTML=`<div class="pay"><h4>💳 Métodos de pago</h4>${banks.length?banks.map(b=>`<p><b>${esc(b.bank)}</b>${b.account_type?' · '+esc(b.account_type):''}<br>N.º ${esc(b.account_number)}${b.account_holder?'<br>Titular: '+esc(b.account_holder):''}</p>`).join(''):'<p>Consulta las cuentas bancarias disponibles por WhatsApp.</p>'}<p>Después de transferir, envía el comprobante por WhatsApp para confirmar.</p><button class="wa" onclick="whatsapp()">Confirmar pedido por WhatsApp</button></div>`}function whatsapp(){let text='Hola BLOOM ACCESORIOS 🌸\nQuiero realizar este pedido:\n'+cart.map(x=>`• ${x.name} x${x.qty} — ${money(x.price*x.qty)}`).join('\n')+'\n\nTotal: '+money(cart.reduce((a,x)=>a+x.price*x.qty,0))+'\n\nQuiero confirmar el pago y coordinar mi pedido.';window.open('https://wa.me/50494439739?text='+encodeURIComponent(text),'_blank')}document.getElementById('search').oninput=render;document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;render()});document.getElementById('cartBtn').onclick=openCart;document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeCart()};db.channel('products-final').on('postgres_changes',{event:'*',schema:'public',table:'products'},load).subscribe();db.channel('banks-final').on('postgres_changes',{event:'*',schema:'public',table:'bank_accounts'},load).subscribe();save();load();
-</script></body></html>
+const SUPABASE_URL = "https://fpoommdbqjyxbtdbsyxg.supabase.co";
+const SUPABASE_KEY = "sb_publishable_OMtcLm4g7uBAvUI0VY_qg_gs5oF9Cr".replace("0VY","0VY"); 
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let products = [];
+let accounts = [];
+let cart = {};
+let activeFilter = "all";
+let searchTerm = "";
+
+const $ = id => document.getElementById(id);
+const money = n => "L " + Number(n || 0).toFixed(2);
+const normalize = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+
+function imageUrl(value){
+  if(!value) return "";
+  return String(value).trim();
+}
+
+function matches(p){
+  const text = normalize(`${p.name} ${p.category} ${p.collection} ${p.tag}`);
+  const filterOk = activeFilter === "all" || p.category === activeFilter || p.collection === activeFilter;
+  return filterOk && (!searchTerm || text.includes(normalize(searchTerm)));
+}
+
+function render(){
+  const visible = products.filter(p => Number(p.stock) > 0 && p.active !== false && matches(p));
+  const groups = [
+    "Colección Cristiana","Colección de Hombre","Colección de Honduras",
+    "Collares","Pulseras","Anillos"
+  ];
+  let html = "";
+  for(const group of groups){
+    const list = visible.filter(p => p.category === group || p.collection === group);
+    if(!list.length) continue;
+    html += `<section class="product-section" data-section="${group}">
+      <div class="section-head"><h2>${group}</h2><span>${list.length} producto${list.length===1?"":"s"}</span></div>
+      <div class="grid">${list.map(card).join("")}</div>
+    </section>`;
+  }
+  if(!html) html = `<div class="empty">No encontramos productos disponibles con esa búsqueda.</div>`;
+  $("catalog").innerHTML = html;
+  $("status").style.display = "none";
+}
+
+function card(p){
+  const img = imageUrl(p.image);
+  const tag = p.tag ? `<span class="tag">${escapeHtml(p.tag)}</span>` : "";
+  const stock = `<span class="stock">${Number(p.stock)} disponible${Number(p.stock)===1?"":"s"}</span>`;
+  const photo = img ? `<img src="${escapeAttr(img)}" alt="${escapeAttr(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="no-photo" style="display:none">BLOOM<br>ACCESORIOS</div>` : `<div class="no-photo">BLOOM<br>ACCESORIOS</div>`;
+  return `<article class="card">
+    <div class="photo">${photo}${tag}${stock}</div>
+    <div class="card-body">
+      <div class="collection">${escapeHtml(p.collection || p.category || "BLOOM")}</div>
+      <h3>${escapeHtml(p.name)}</h3>
+      <div class="price">${money(p.price)}</div>
+      <button onclick="addToCart(${Number(p.id)})">Agregar al carrito</button>
+    </div>
+  </article>`;
+}
+
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function escapeAttr(s){return escapeHtml(s);}
+
+function addToCart(id){
+  const p = products.find(x => Number(x.id) === Number(id));
+  if(!p || Number(p.stock)<=0) return;
+  cart[id] = Math.min((cart[id]||0)+1, Number(p.stock));
+  saveCart(); renderCart();
+  $("cartModal").classList.add("show");
+}
+
+function changeQty(id, delta){
+  const p = products.find(x=>Number(x.id)===Number(id));
+  if(!p) return;
+  const next = (cart[id]||0)+delta;
+  if(next<=0) delete cart[id];
+  else cart[id]=Math.min(next,Number(p.stock));
+  saveCart(); renderCart();
+}
+
+function renderCart(){
+  const entries = Object.entries(cart).map(([id,qty])=>{
+    const p=products.find(x=>Number(x.id)===Number(id));
+    if(!p || Number(p.stock)<=0){delete cart[id];return "";}
+    const img=imageUrl(p.image);
+    return `<div class="cart-row">
+      ${img?`<img src="${escapeAttr(img)}" alt="">`:`<div style="width:60px;height:60px;border-radius:13px;background:#eef8fa;display:grid;place-items:center">B</div>`}
+      <div><b>${escapeHtml(p.name)}</b><div style="font-size:12px;color:#6d7785">${money(p.price)} c/u</div><div class="qty"><button onclick="changeQty(${id},-1)">−</button><span>${qty}</span><button onclick="changeQty(${id},1)">+</button></div></div>
+      <b>${money(Number(p.price)*qty)}</b>
+    </div>`;
+  }).join("");
+  $("cartItems").innerHTML=entries || `<div class="empty" style="margin-top:18px">Tu carrito está vacío.</div>`;
+  const total=Object.entries(cart).reduce((sum,[id,q])=>{const p=products.find(x=>Number(x.id)===Number(id));return sum+(p?Number(p.price)*q:0)},0);
+  $("cartTotal").textContent=money(total);
+  $("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);
+}
+
+function saveCart(){try{localStorage.setItem("bloom_cart",JSON.stringify(cart))}catch(e){}}
+function loadCart(){try{cart=JSON.parse(localStorage.getItem("bloom_cart")||"{}")||{}}catch(e){cart={}}}
+
+async function loadProducts(){
+  $("status").style.display="block";
+  const {data,error}=await db.from("products").select("*").eq("active",true).gt("stock",0).order("created_at",{ascending:false});
+  if(error){
+    console.error(error);
+    $("status").innerHTML="No se pudieron cargar los productos. Revisa las políticas SELECT de Supabase.";
+    return;
+  }
+  products=data||[];
+  render(); renderCart();
+}
+
+async function loadAccounts(){
+  const {data,error}=await db.from("bank_accounts").select("*").eq("active",true).order("created_at",{ascending:false});
+  if(error){console.error(error);$("accounts").innerHTML="<div class='empty'>No se pudieron cargar las cuentas bancarias.</div>";return;}
+  accounts=data||[];
+  $("accounts").innerHTML=accounts.length ? accounts.map(a=>`<div class="account"><b>${escapeHtml(a.bank)}</b><br><span>${escapeHtml(a.account_type||"Cuenta")}</span><br><strong>${escapeHtml(a.account_number)}</strong>${a.account_holder?`<br><small>${escapeHtml(a.account_holder)}</small>`:""}</div>`).join("") : "<div class='empty'>Próximamente agregaremos las cuentas bancarias.</div>";
+}
+
+function subscribe(){
+  db.channel("bloom-live")
+    .on("postgres_changes",{event:"*",schema:"public",table:"products"},()=>loadProducts())
+    .on("postgres_changes",{event:"*",schema:"public",table:"bank_accounts"},()=>loadAccounts())
+    .subscribe();
+}
+
+$("search").addEventListener("input",e=>{searchTerm=e.target.value;render()});
+document.querySelectorAll("#nav button").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll("#nav button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active"); activeFilter=btn.dataset.filter; render();
+  document.getElementById("productos").scrollIntoView({behavior:"smooth"});
+}));
+$("cartOpen").onclick=()=>{$("cartModal").classList.add("show");renderCart()};
+$("cartClose").onclick=()=>$("cartModal").classList.remove("show");
+$("cartModal").addEventListener("click",e=>{if(e.target===$("cartModal"))$("cartModal").classList.remove("show")});
+$("whatsappOrder").onclick=()=>{
+  const rows=Object.entries(cart).map(([id,q])=>{const p=products.find(x=>Number(x.id)===Number(id));return p?`• ${p.name} x${q} = ${money(Number(p.price)*q)}`:""}).filter(Boolean);
+  if(!rows.length){alert("Tu carrito está vacío.");return}
+  const total=Object.entries(cart).reduce((s,[id,q])=>{const p=products.find(x=>Number(x.id)===Number(id));return s+(p?Number(p.price)*q:0)},0);
+  const msg=`Hola BLOOM ACCESORIOS 🌸\n\nQuiero realizar este pedido:\n${rows.join("\n")}\n\nTotal: ${money(total)}\n\nNombre: ${$("customerName").value||"No indicado"}\nTeléfono: ${$("customerPhone").value||"No indicado"}\nIndicaciones: ${$("customerNote").value||"No indicadas"}\n\nQuedo pendiente de la confirmación.`;
+  window.open("https://wa.me/50494439739?text="+encodeURIComponent(msg),"_blank");
+};
+
+loadCart();
+loadProducts();
+loadAccounts();
+subscribe();
+</script>
+</body>
+</html>
